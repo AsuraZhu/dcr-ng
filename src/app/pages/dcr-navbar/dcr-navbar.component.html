@@ -3,13 +3,14 @@
     <a routerLink="/">BATPOOL</a>
   </div>
   <div class="lang">
-      <a [ngClass]="activeName" (click)="toggle('zh')" href="javascript:;">中文</a>
+      <a [ngClass]="activeName==='zh'?'act':''" (click)="toggle('zh')" href="javascript:;">中文</a>
       <span>/</span>
-      <a [ngClass]="activeName" (click)="toggle('en')" href="javascript:;">EN</a>
+      <a [ngClass]="activeName==='en'?'act':''" (click)="toggle('en')" href="javascript:;">EN</a>
   </div>
   <div class="ul">
       <ul>
-          <li v-for="item in meau">
+          <li *ngFor="let item in meau">
+              <a ></a>
               <!-- <a :class="{actMeau:activeMeau==item}" href="javascript:;">{{item}}</a> -->
           </li>
       </ul>

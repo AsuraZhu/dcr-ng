@@ -16,7 +16,8 @@ import { DcrHeadComponent } from './header/dcr-head.component';
   providers: [],
   exports: [
     DcrFootComponent,
-    DcrHeadComponent
+    DcrHeadComponent,
+    CommonModule
   ]
 })
 export class SharedModule {
