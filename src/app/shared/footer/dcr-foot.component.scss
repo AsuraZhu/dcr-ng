@@ -1,0 +1,88 @@
+footer {
+  background: #27364e;
+}
+
+.wrap {
+  width: 1220px;
+  margin: 0 auto;
+  height: 258px;
+}
+
+.tit1 {
+  ul {
+    width: 708px;
+    margin: 0 auto;
+    li {
+      width: 141.6px;
+      display: block;
+      float: left;
+      a {
+        display: block;
+        font-size: 14px;
+        color: #ddd;
+        text-align: center;
+        margin-top: 42px;
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
+
+.foot-logo {
+  width: 142px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  ul {
+    li {
+      display: block;
+      float: left;
+      width: 35.5px;
+      text-align: center;
+      a {
+        color: #fff;
+        width: 21px;
+        text-indent: -9999px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    li:nth-child(1)>a.lo {
+      width: 21px;
+      height: 16px;
+      background: url('/assets/images/weiboicon.png')
+    }
+    li:nth-child(2)>a {
+      width: 16px;
+      height: 18px;
+      background: url('/assets/images/qqicon.png')
+    }
+    li:nth-child(3)>a {
+      width: 21px;
+      height: 18px;
+      background: url('/assets/images/weixinicon.png')
+    }
+    li:nth-child(4)>a {
+      width: 20px;
+      height: 21px;
+      background: url('/assets/images/baiduicon.png')
+    }
+  }
+}
+
+.lang-t {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 28px;
+  a {
+    color: #999;
+    font-size: 14px;
+  }
+  span {
+    color: #999;
+  }
+}
+
+.line {
+  border-bottom: 1px solid #3f4b5e;
+}

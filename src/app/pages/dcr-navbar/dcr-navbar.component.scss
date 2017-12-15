@@ -1,0 +1,108 @@
+
+$blue1:#1879BE;
+
+.wrap {
+  height: 60px;
+  width: 1220px;
+  margin: 0 auto;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "SimSun";
+}
+
+.logo {
+  height: 29px;
+  float: left;
+  margin: 15px 41px 16px 0;
+  a {
+      display: block;
+      height: 29px;
+      text-indent: -999px;
+      width: 155px;
+      background: url('/assets/images/Bitmap.png');
+  }
+}
+
+.lang {
+  font-size: 14px;
+  float: left;
+  margin-top: 28px;
+  line-height: 18px;
+  margin-bottom: 13px;
+  a {
+      display: block;
+      float: left;
+  }
+  span {
+      display: block;
+      float: left;
+      margin: 0 9px;
+  }
+}
+
+.act {
+  color: $blue1;
+}
+
+
+.ul {
+  float: left;
+  margin-left: 404px;
+  height: 60px;
+  background: #fff;
+  ul {
+      li {
+          height: 58px;
+          line-height: 60px;
+          width: 80px;
+          float: left;
+          display: block;
+          list-style: none;
+          a {
+              font-size: 16px;
+              display: block;
+              height: 58px;
+              line-height: 60px;
+              text-align: center;
+          }
+      }
+  }
+}
+
+.reg-act {
+  height: 40px;
+  width: 90px;
+  margin-top: 10px;
+  color: #fff!important;
+  background: $blue1;
+  text-align: center;
+  line-height: 40px;
+}
+
+.actMeau {
+  border-bottom: 2px solid #1AA8F0;
+}
+
+.login {
+  font-size: 14px;
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  a {
+      display: block;
+      float: left;
+      font-size: 16px;
+      color: $blue1;
+  }
+}
+
+.headfix {
+  position: fixed!important;
+  z-index: 77;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.headMargin {
+  clear: both;
+  height: 50px;
+}

@@ -1,3 +1,42 @@
-<div>
-  dcr foot
-</div>
+<footer>
+  <div class="wrap">
+      <div class="tit1">
+          <ul class="clearfix">
+              <li *ngFor = "let item of list">
+                  <a style="cursor:pointer;">
+                      {{item.name}}
+                  </a>
+              </li>
+          </ul>
+      </div>
+
+      <section class="foot-logo">
+          <ul class="clearfix">
+              <li>
+                  <a class="lo" href="javascript:;">微博</a>
+              </li>
+              <li>
+                  <a class="lo" href="javascript:;">qq</a>
+              </li>
+              <li>
+                  <a class="lo" href="javascript:;">微信</a>
+              </li>
+              <li style="float: right">
+                  <a class="lo" href="javascript:;">百度</a>
+              </li>
+          </ul>
+      </section>
+
+      <section class="lang-t">
+          <a href="javascript:;">中文</a>
+          <span>|</span>
+          <a href="javascript:;">EN</a>
+      </section>
+
+      <div class="line"></div>
+
+      <div style="text-align: center;font-size: 12px;color: #999;margin-top: 20px">
+          Copyringht &copy 2017 Bitmain Technologies. All Rights Reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京公网安备 11010802022514号&nbsp;&nbsp;&nbsp;京ICP备15028173号-2
+      </div>
+  </div>
+</footer>

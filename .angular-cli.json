@@ -16,9 +16,9 @@
     "test": "test.ts",
     "tsconfig": "tsconfig.app.json",
     "testTsconfig": "tsconfig.spec.json",
-    "prefix": "app",
+    "prefix": "dcr",
     "styles": [
-      "styles.css"
+      "styles.scss"
     ],
     "scripts": [],
     "environmentSource": "environments/environment.ts",

@@ -7,6 +7,7 @@ import { DcrHeadComponent } from './header/dcr-head.component';
 
 @NgModule({
   imports: [
+    CommonModule
   ],
   declarations: [
     DcrFootComponent,

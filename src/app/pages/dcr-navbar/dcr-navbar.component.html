@@ -1,0 +1,23 @@
+<div class="wrap">
+  <div class="logo">
+    <a routerLink="/">BATPOOL</a>
+  </div>
+  <div class="lang">
+      <a [ngClass]="activeName" (click)="toggle('zh')" href="javascript:;">中文</a>
+      <span>/</span>
+      <a [ngClass]="activeName" (click)="toggle('en')" href="javascript:;">EN</a>
+  </div>
+  <div class="ul">
+      <ul>
+          <li v-for="item in meau">
+              <!-- <a :class="{actMeau:activeMeau==item}" href="javascript:;">{{item}}</a> -->
+          </li>
+      </ul>
+  </div>
+
+  <div class="login">
+      <a routerLink="/login" style="margin-right: 26px" to="login">登录</a>
+      <!-- <a style="margin-right: 26px" href="javascript:;">登录</a> -->
+      <a routerLink="/register" class="reg-act" style="margin-right: 26px" >注册</a>
+  </div>
+</div>
