@@ -9,6 +9,7 @@ import { reducer } from './ngrx/reducer/index';
 import { SharedModule } from './shared/shared.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
