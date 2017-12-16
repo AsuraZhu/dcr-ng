@@ -7,7 +7,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './ngrx/reducer/index';
 import { SharedModule } from './shared/shared.module';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -17,6 +17,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NgbModule.forRoot(),
     SharedModule,
     AppRoutingModule,
     StoreModule.forRoot({reducer}),
