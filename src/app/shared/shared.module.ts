@@ -5,9 +5,10 @@ import { DcrFootComponent } from './footer/dcr-foot.component';
 import { DcrHeadComponent } from './header/dcr-head.component';
 
 
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   declarations: [
     DcrFootComponent,

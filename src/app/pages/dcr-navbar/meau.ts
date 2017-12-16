@@ -1,3 +1,3 @@
 export class Meau {
-  constructor(private name: string) {}
+  name: string;
 }

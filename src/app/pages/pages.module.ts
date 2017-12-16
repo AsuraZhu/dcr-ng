@@ -3,6 +3,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared';
 import { DcrNavbarComponent } from './dcr-navbar/dcr-navbar.component';
+import { CommonModule } from '@angular/common';
 
 
 const PAGES_COMPONENTS = [
@@ -15,10 +16,11 @@ const PAGES_COMPONENTS = [
   ],
   imports: [
     PagesRoutingModule,
-    SharedModule
+    SharedModule,
+    CommonModule
   ],
   exports: [
-    ...PAGES_COMPONENTS
+    ...PAGES_COMPONENTS,
   ],
   providers: [
   ],

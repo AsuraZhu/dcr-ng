@@ -9,8 +9,9 @@
   </div>
   <div class="ul">
       <ul>
-          <li *ngFor="let item in meau  ">
-              <a >{{item.name}}</a>
+        <!-- {{ meau }} -->
+          <li *ngFor="let item of meau">
+              <a style="cursor:pointer;" [ngClass]="activeMeau===item.name?'actMeau':''">{{ item.name }}</a>
               <!-- <a :class="{actMeau:activeMeau==item}" href="javascript:;">{{item}}</a> -->
           </li>
       </ul>

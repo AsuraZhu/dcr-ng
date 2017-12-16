@@ -9,16 +9,25 @@ import { Meau } from './meau';
   styleUrls: ['./dcr-navbar.component.scss']
 })
 export class DcrNavbarComponent implements OnInit {
-  constructor(private meau: Meau[]) { }
+  // private meau: Meau[]
+  constructor() { }
+  a = [1, 2, 3];
   activeName = 'zh';
+  activeMeau = '首页';
+  meau: Meau[] = [];
   toggle(str: string): void {
     this.activeName = str === 'zh' ? 'zh' : 'en';
   }
   ngOnInit() {
-    const first = new Meau('首页');
-    const count = new Meau('统计');
-    const help  = new Meau('帮助');
-    const download = new Meau('下载');
-    this.meau = [first, count, help, download];
+     this.meau = [{
+      name: '首页'
+    }, {
+      name: '统计'
+    }, {
+      name: '下载'
+    }, {
+      name: '帮助'
+    }];
   }
 }
+
