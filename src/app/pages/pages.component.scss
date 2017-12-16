@@ -1,0 +1,182 @@
+.wrapper {
+  height: 1000px;
+  width: 1220px;
+  margin: 0 auto;
+}
+.body {
+  height: 373px;
+  .t1 {
+    margin-left: 435px;
+    height: 47px;
+    line-height: 47px;
+    font-size: 36px;
+    margin-top: 107px;
+  }
+  .list {
+    width: 432px;
+    margin: 0 auto;
+    margin-top: 18px;
+    margin-bottom: 63px;
+    height: 36px;
+    ul {
+      list-style: none;
+      height: 38px;
+      width: 472px;
+      display: block;
+      background: url("/static/ilogo.png");
+      background-repeat: no-repeat;
+      li {
+        display: block;
+        float: left;
+        width: 36px;
+        border-radius: 50%;
+        height: 36px; // background: #D8D8D8;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+.go-btn {
+  height: 50px;
+  margin-bottom: 52px;
+  a {
+    display: block;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #1879be 100%;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 521px;
+  }
+}
+//币种
+.coin_type {
+  height: 81px;
+  li {
+    display: block;
+    float: left;
+    width: 138px;
+    height: 48px;
+    line-height: 50px;
+    text-align: center;
+    margin-left: 39px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    color: #666;
+    position: relative;
+  }
+  li:nth-child(1) {
+    margin-left: 0;
+  }
+  li.ret {
+    margin-right: 0;
+  }
+  li.act_tive {
+    border: none;
+    width: 140px;
+    height: 50px;
+    background: #1c95d4;
+    color: #fff;
+  } //三角形
+  .trang {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    width: 0px;
+    height: 0;
+    border-top: 10px solid #1c95d4;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+  }
+} //中间提供收益可能
+section.desc {
+  background: #1c95d4;
+  .bg {
+    margin: 0 auto;
+    background-image: url("/static/bghome.png");
+    width: 1220px;
+    height: 598px;
+  }
+  height: 600px;
+  .dec-tit {
+    width: 1220px;
+    margin: 0 auto;
+    .p1 {
+      font-size: 30px;
+      color: #fff;
+      padding-top: 100px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+    .p2 {
+      font-size: 18px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 74px;
+    }
+  }
+}
+.dec-list {
+  ul {
+    padding: 0 43px;
+    li {
+      width: 1220px;
+      text-align: center;
+      display: block;
+      float: left;
+      color: #fff;
+      width: 295px;
+      div {
+        margin: 0 auto;
+      }
+    }
+    li:nth-child(2) {
+      margin: 0 124px;
+    }
+  }
+} //挖矿小助手
+.mine {
+  background: #fff;
+} //合作伙伴
+.partner {
+  background: #1c95d4;
+  height: 575px;
+  p {
+    text-align: center;
+    color: #fff;
+  }
+  .p1 {
+    padding-top: 100px;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .p2 {
+    font-size: 18px;
+    margin-bottom: 97px;
+  }
+  .pat-warp {
+    width: 1220px;
+    margin: 0 auto;
+    ul {
+      li {
+        width: 210px;
+        height: 62px;
+        margin-bottom: 40px;
+        display: block;
+        float: left;
+        margin-left: 40px;
+        a {
+          display: block;
+        }
+      }
+      li:nth-child(1) {
+        margin-left: 0;
+      }
+      li:nth-child(6) {
+        margin-left: 0;
+      }
+    }
+  }
+}

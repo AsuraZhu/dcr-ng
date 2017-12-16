@@ -11,9 +11,8 @@ import { Meau } from './meau';
 export class DcrNavbarComponent implements OnInit {
   // private meau: Meau[]
   constructor() { }
-  a = [1, 2, 3];
   activeName = 'zh';
-  activeMeau = '首页';
+  activeMeau = '首页';   //  判断当前选取的 菜单
   meau: Meau[] = [];
   toggle(str: string): void {
     this.activeName = str === 'zh' ? 'zh' : 'en';
