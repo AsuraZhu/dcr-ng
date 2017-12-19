@@ -5,7 +5,9 @@ import * as reducer from '../../ngrx/reducer';
 import * as load from '../../ngrx/action/loading';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/combineLatest';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +20,17 @@ export class LoginComponent implements OnInit {
     console.log('zzz');
     this.tagState$ = this.store.select('loading').startWith(true);
     this.store.select('loading').startWith(true).subscribe(data => {console.log(data); });
+    this.store.select('userinfo').subscribe(data => {
+      console.log('测试');
+      console.log(data);
+    });
+    const a = new Subject<string>();
+    a.combineLatest(this.tagState$).subscribe(res => {
+      console.log(res);
+    });
+    a.next('0');
+    setTimeout(() => {a.next('123'); }, 1000);
+    setTimeout(() => {a.next('1234'); }, 10000);
    }
   open(): void {
     this.store.dispatch(new load.HideAction());
