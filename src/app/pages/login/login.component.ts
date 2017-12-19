@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/combineLatest';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
+import { User } from '../../ngrx/reducer/userinfo/user.class';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,8 @@ import { Subject } from 'rxjs/Subject';
 })
 export class LoginComponent implements OnInit {
   tagState$: Observable<boolean>;
+  data$: Observable<any>;
+  a = {};
   constructor(private http: HttpClient, private store: Store<reducer.State>) {
     console.log('zzz');
     this.tagState$ = this.store.select('loading').startWith(true);
@@ -33,9 +36,18 @@ export class LoginComponent implements OnInit {
     setTimeout(() => {a.next('1234'); }, 10000);
    }
   open(): void {
-    this.store.dispatch(new load.HideAction());
+    const user = new User();
+    user.name = 'zs';
+    user.age = 10;
+    this.store.dispatch(new load.HideAction(user));
+  }
+  search(): Observable<any> {
+    return this.http.get('http://batpool.dev.ailadui.net/v1/api/user/public/login')
+              .map(res => { console.log(res, 11111111); return res; })
+               .map(res => res || {});
   }
   ngOnInit() {
+    this.data$ = this.search();
     this.open();
     this.store.dispatch(new load.ShowAction());
    const login =  this.http.get('http://batpool.dev.ailadui.net/v1/api/user/public/login' , {params: {
