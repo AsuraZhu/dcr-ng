@@ -20,7 +20,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NgbModule.forRoot(),
     SharedModule,
     AppRoutingModule,
-    StoreModule.forRoot({reducer}),
+    StoreModule.forRoot(reducer),
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/'}
