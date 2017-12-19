@@ -1,1 +1,44 @@
-登录
+<div class="body">
+    <div class="wrapper">
+        <p class="tit1">BATPOOL福池，挖矿从未如此轻松</p>
+        <p class="tit2">和全球153个国家，59万用户一起享受挖矿新方式</p>
+
+        <div class="login-t">
+            <div class="username" style="width:280px;margin: 0 auto ;padding-top: 53px;margin-bottom: 40px">
+                <!-- <myinput v-model="usernameV" :attr="username"></myinput> -->
+            </div>
+
+            <div class="password" style="width:280px;margin: 0 auto ;margin-bottom: 50px">
+                <!-- <myinput v-model="passwordV" :attr="password"></myinput> -->
+            </div>
+
+            <!--人机交互-->
+
+            <div style="width: 300px;margin: 0 auto;margin-bottom: 48px;margin-left:55px;" class="">
+                <div style="text-align:center" v-show="show">正在加载验证码</div>
+                <div v-show="!show" style="margin:0 auto;" id="captcha"></div>
+            </div>
+
+            <!--人机验证待定-->
+
+            <!-- <div @click="login" class="logo-btn">登录</div> -->
+
+            <div class="forget">
+                <a href="">忘记密码 ?</a>
+                <a href="">注册账号</a>
+
+            </div>
+            <div class="clearfix" style="width: 280px;margin: 0 auto;margin-top: 82px;font-size: 14px;color: #666!important;margin-bottom: 12px">
+                <div style="float:left;height:1px;background:#ddd;width:100px;margin-top:10px;"></div>
+                <div style="float:left;text-align:center;width:80px;">快捷登录</div>
+                <div style="float:right;height:1px;background:#ddd;width:100px;margin-top:10px;"></div>
+            </div>
+
+            <div class="kj">
+                <a href="">微信</a>
+                <a href="">QQ</a>
+            </div>
+        </div>
+    </div>
+
+</div>
