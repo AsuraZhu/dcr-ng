@@ -18,7 +18,7 @@ import { User } from '../../ngrx/reducer/userinfo/user.class';
 export class LoginComponent implements OnInit {
   tagState$: Observable<boolean>;
   data$: Observable<any>;
-  a = {};
+  a = Observable.of([1, 2, 3]);
   constructor(private http: HttpClient, private store: Store<reducer.State>) {
     console.log('zzz');
     this.tagState$ = this.store.select('loading').startWith(true);
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
   search(): Observable<any> {
     return this.http.get('http://batpool.dev.ailadui.net/v1/api/user/public/login')
               .map(res => { console.log(res, 11111111); return res; })
-               .map(res => res || {});
+              .map(res => res || {});
   }
   ngOnInit() {
     this.data$ = this.search();
