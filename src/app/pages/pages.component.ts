@@ -18,52 +18,52 @@ export class PagesComponent implements OnInit {
   part =  [{
     name: '',
     href: '',
-    src: '/assets/images/homelogo/logo-blue0.png'
+    src: '/assets/images/homelogo/logo-white0.png'
   },
     {
       name: '',
       href: '',
-      src: '/assets/images/homelogo/logo-blue1.png'
+      src: '/assets/images/homelogo/logo-white1.png'
     },
     {
       name: '',
       href: '',
-      src: '/assets/images/homelogo/logo-blue2.png'
+      src: '/assets/images/homelogo/logo-white2.png'
     },
     {
       name: '',
       href: '',
-      src: '/assets/images/homelogo/logo-blue3.png'
+      src: '/assets/images/homelogo/logo-white3.png'
     },
     {
       name: '',
       href: '',
-      src: '/assets/images/homelogo/logo-blue4.png'
+      src: '/assets/images/homelogo/logo-white4.png'
     },
     {
       name: '',
       href: '',
-      src: '/assets/images/homelogo/logo-blue5.png'
+      src: '/assets/images/homelogo/logo-white5.png'
     },
     {
       name: '',
       href: '',
-      src: '/assets/images/homelogo/logo-blue6.png'
+      src: '/assets/images/homelogo/logo-white6.png'
     },
     {
       name: '',
       href: '',
-      src: '/assets/images/homelogo/logo-blue7.png'
+      src: '/assets/images/homelogo/logo-white7.png'
     },
     {
       name: '',
       href: '',
-      src: '/assets/images/homelogo/logo-blue8.png'
+      src: '/assets/images/homelogo/logo-white8.png'
     },
     {
       name: '',
       href: '',
-      src: '/assets/images/homelogo/logo-blue9.png'
+      src: '/assets/images/homelogo/logo-white9.png'
     }
   ];
   @ViewChild('src') src: ElementRef;
@@ -105,14 +105,16 @@ export class PagesComponent implements OnInit {
    }
 
    // mouseover 事件
-   over(index, ev: Event): void {
-      const elementRef = this.src.nativeElement;
-      this.renderer.setAttribute(elementRef, 'src', '/assets/images/homelogo/logo-white' + index + '.png');
+   over(index: number, ev: MouseEvent): void {
+      // const elementRef = this.src.nativeElement;
+      (<HTMLImageElement>ev.target).setAttribute('src', '/assets/images/homelogo/logo-blue' + index + '.png');
+      // this.renderer.setAttribute(elementRef, 'src', '/assets/images/homelogo/logo-white' + index + '.png');
       // elementRef.setAttribute('src', '0.png');
-      console.log(elementRef, 0);
-      console.log(index, ev.target);
+     //  console.log(index, ev.target);
    }
-   out(index, ev): void {
-     console.log(index, ev);
+   out(index: number, ev): void {
+    // const elementRef = this.src.nativeElement;
+    ev.target.setAttribute('src', '/assets/images/homelogo/logo-white' + index + '.png');
+    // this.renderer.setAttribute(elementRef, 'src', '/assets/images/homelogo/logo-blue' + index + '.png');
    }
 }

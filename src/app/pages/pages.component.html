@@ -47,8 +47,8 @@
       <p class="p1">合作伙伴</p>
       <p class="p2">30,000+ 点产品设计团队共同选择，50,000+ 的同时协同项目</p>
       <ul class="clearfix">
-        <li *ngFor="let item of part; let index" >
-          <a (mouseout)="out(index,$event)" (mouseover)="over(index,$event)" href="">
+        <li *ngFor="let item of part; index as i" >
+          <a (mouseout)="out(i,$event)" (mouseover)="over(i,$event)" href="">
            <img #src [src]="item.src" alt="">
           </a>
         </li>
