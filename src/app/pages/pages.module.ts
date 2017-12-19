@@ -3,12 +3,14 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared';
 import { DcrNavbarComponent } from './dcr-navbar/dcr-navbar.component';
+import { LoginComponent } from './login/login.component';
 
 
 
 const PAGES_COMPONENTS = [
   PagesComponent,
-  DcrNavbarComponent
+  DcrNavbarComponent,
+  LoginComponent
 ];
 @NgModule({
   declarations: [
