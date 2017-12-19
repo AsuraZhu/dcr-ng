@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from './ngrx/reducer/index';
 import { SharedModule } from './shared/shared.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     SharedModule,
     AppRoutingModule,
     StoreModule.forRoot(reducer),
+    StoreDevtoolsModule.instrument()
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/'}

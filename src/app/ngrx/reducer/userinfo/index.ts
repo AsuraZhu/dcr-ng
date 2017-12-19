@@ -9,6 +9,9 @@ export function reducer(state: User = initialState, action: load.Actions) {
       const user = new User();
       user.age = 10;
       user.name = 'name';
+      // return Object.assign({}, state, {
+      //   age: action.payload
+      // });
       return user;
     }
 
