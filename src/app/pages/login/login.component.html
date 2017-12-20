@@ -3,12 +3,11 @@
 <dcr-head>
     <dcr-nav></dcr-nav>
 </dcr-head>
-
+<dcr-input (event)='eventHandler($event)'></dcr-input>
 <div class="body">
     <div class="wrapper">
         <p class="tit1">BATPOOL福池，挖矿从未如此轻松</p>
         <p class="tit2">和全球153个国家，59万用户一起享受挖矿新方式 {{tagState$ | async}}</p>
-        {{ a | async }}
         <div class="login-t">
             <div class="username" style="width:280px;margin: 0 auto ;padding-top: 53px;margin-bottom: 40px">
                 <!-- <myinput v-model="usernameV" :attr="username"></myinput> -->

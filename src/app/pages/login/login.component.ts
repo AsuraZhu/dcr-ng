@@ -9,6 +9,8 @@ import 'rxjs/add/operator/combineLatest';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { User } from '../../ngrx/reducer/userinfo/user.class';
+import { DcrInput } from '../../shared/dcr-input/dcrinput';
+import { AttackService } from '../../shared/AttackService';
 
 @Component({
   selector: 'app-login',
@@ -18,55 +20,22 @@ import { User } from '../../ngrx/reducer/userinfo/user.class';
 export class LoginComponent implements OnInit {
   tagState$: Observable<boolean>;
   data$: Observable<any>;
-  a = Observable.of([1, 2, 3]);
-  constructor(private http: HttpClient, private store: Store<reducer.State>) {
-    console.log('zzz');
-    this.tagState$ = this.store.select('loading').startWith(true);
-    this.store.select('loading').startWith(true).subscribe(data => {console.log(data); });
-    this.store.select('userinfo').subscribe(data => {
-      console.log('测试');
-      console.log(data);
-    });
-    const a = new Subject<string>();
-    a.combineLatest(this.tagState$).subscribe(res => {
-      console.log(res);
-    });
-    a.next('0');
-    setTimeout(() => {a.next('123'); }, 1000);
-    setTimeout(() => {a.next('1234'); }, 10000);
-   }
+  strT: string;
+  constructor(private http: HttpClient, private store: Store<reducer.State>, private attackService: AttackService) {
+      this.attackService.damage$.subscribe(damage => {
+        console.log(damage);
+      });
+  }
+  eventHandler(event: DcrInput): void {
+    console.log(event.imgsrc);
+  }
   open(): void {
     const user = new User();
     user.name = 'zs';
     user.age = 10;
     this.store.dispatch(new load.HideAction(user));
   }
-  search(): Observable<any> {
-    return this.http.get('http://batpool.dev.ailadui.net/v1/api/user/public/login')
-              .map(res => { console.log(res, 11111111); return res; })
-              .map(res => res || {});
-  }
+
   ngOnInit() {
-    this.data$ = this.search();
-    this.open();
-    this.store.dispatch(new load.ShowAction());
-   const login =  this.http.get('http://batpool.dev.ailadui.net/v1/api/user/public/login' , {params: {
-     'challenge': '',
-     'device_type': 'web',
-     'password': '123456',
-     'seccode': '',
-     'username': '13823688575',
-     'validate': ''
-   }})
-    .toPromise()
-    .then(response => {
-      console.log(response);
-      return response;
-    })
-    .catch(error => {
-      return Promise.reject(error.message || error);
-    })
-    ;
-    console.log(login);
-   }
+  }
 }

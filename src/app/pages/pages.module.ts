@@ -6,8 +6,6 @@ import { DcrNavbarComponent } from './dcr-navbar/dcr-navbar.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 const PAGES_COMPONENTS = [
   PagesComponent,
   DcrNavbarComponent,
