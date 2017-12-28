@@ -8,6 +8,7 @@ import { GtService } from './services';
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule
   ],
   declarations: [
     DcrFootComponent,
@@ -22,7 +23,8 @@ import { GtService } from './services';
     DcrFootComponent,
     DcrHeadComponent,
     DcrInputComponent,
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class SharedModule {

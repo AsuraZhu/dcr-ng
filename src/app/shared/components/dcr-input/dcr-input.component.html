@@ -1,0 +1,11 @@
+<div>
+  <img [src]="icon" alt="">
+  <input
+    [ngModel]="value"
+    [placeholder]="placeholder"
+    [disabled] = "disabled"
+    [type]="type"
+    (ngModelChange)="handleInput($event)"
+    autocomplete="off"
+  >
+</div>

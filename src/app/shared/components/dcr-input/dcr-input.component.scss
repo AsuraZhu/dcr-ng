@@ -1,0 +1,22 @@
+div {
+  position: relative;
+  width: 280px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+
+input {
+  color: #666;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 280 - 28px;
+  height: 20px;
+  // padding-left: 28px;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: rgb(250, 255, 189); /* #FAFFBD; */
+  background-image: none;
+  color: rgb(0, 0, 0);
+}
