@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Store} from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import * as reducer from '../../ngrx/reducer';
 import * as load from '../../ngrx/action/loading';
 import 'rxjs/add/operator/startWith';
@@ -22,9 +22,9 @@ export class LoginComponent implements OnInit {
   data$: Observable<any>;
   strT: string;
   constructor(private http: HttpClient, private store: Store<reducer.State>, private attackService: AttackService) {
-      this.attackService.damage$.subscribe(damage => {
-        console.log(damage);
-      });
+    this.attackService.damage$.subscribe(damage => {
+      console.log(damage);
+    });
   }
   eventHandler(event: DcrInput): void {
     console.log(event.imgsrc);
@@ -37,5 +37,20 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.http.get('http://batpool.dev.ailadui.net/v1/api/user/public/checkgt?time=1514433161894')
+      .toPromise()
+      .then(data => {
+        initGeetest({
+          gt: data['gt'],
+          challenge: data['challenge'],
+          product: 'popup',
+          width: '300px'
+        }, (captchaObj) => {
+          captchaObj.appendTo('#captcha');
+          captchaObj.onReady(function () {
+          });
+        });
+      });
   }
 }
