@@ -16,7 +16,7 @@ import { HttpClient } from '@angular/common/http';
       return this.http.get(this.url)
                  .toPromise()
                  .then(response => {
-                  return response['data'];
+                  return response;
                  })
                  .catch(this.handleError);
     }

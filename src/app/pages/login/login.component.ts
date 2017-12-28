@@ -11,6 +11,7 @@ import { Subject } from 'rxjs/Subject';
 import { User } from '../../ngrx/reducer/userinfo/user.class';
 import { AttackService } from '../../shared/AttackService';
 import { DcrInput } from '../../shared/components/dcr-input/dcrinput';
+import { GtService } from '../../shared/services/index';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,12 @@ export class LoginComponent implements OnInit {
   tagState$: Observable<boolean>;
   data$: Observable<any>;
   strT: string;
-  constructor(private http: HttpClient, private store: Store<reducer.State>, private attackService: AttackService) {
+  constructor(
+    private http: HttpClient,
+    private store: Store<reducer.State>,
+    private attackService: AttackService,
+    private gtService: GtService
+  ) {
     this.attackService.damage$.subscribe(damage => {
       console.log(damage);
     });
@@ -37,20 +43,17 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    this.http.get('http://batpool.dev.ailadui.net/v1/api/user/public/checkgt?time=1514433161894')
-      .toPromise()
-      .then(data => {
-        initGeetest({
-          gt: data['gt'],
-          challenge: data['challenge'],
-          product: 'popup',
-          width: '300px'
-        }, (captchaObj) => {
-          captchaObj.appendTo('#captcha');
-          captchaObj.onReady(function () {
-          });
+    this.gtService.getData().then(data => {
+      initGeetest({
+        gt: data['gt'],
+        challenge: data['challenge'],
+        product: 'popup',
+        width: '300px'
+      }, (captchaObj) => {
+        captchaObj.appendTo('#captcha');
+        captchaObj.onReady(function () {
         });
       });
+    });
   }
 }
