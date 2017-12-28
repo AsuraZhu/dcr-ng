@@ -2,21 +2,26 @@ input {
   border: none;
   outline: none;
 }
-.username, .password {
+
+.username,
+.password {
   width: 280px;
-  margin: 0px  auto;
+  margin: 0px auto;
   margin-bottom: 50px;
 }
+
 .username {
-  padding-top:53px;
+  padding-top: 53px;
 }
+
 // 级验验证码
 .captcha {
   width: 280px;
   margin: 0 auto;
   margin-bottom: 48px;
-  margin-left:55px;
+  margin-left: 55px;
 }
+
 .body {
   height: 1080px;
   background: url('/assets/images/bg.png');
@@ -86,6 +91,23 @@ input {
 
 
 /*快捷登录*/
+
+.kjp {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 82px;
+  font-size: 14px;
+  color: #666!important;
+  margin-bottom: 12px;
+  .pcontent {
+    float:left;text-align:center;width:80px;
+  }
+  .fl,.rl{
+    height:1px;background:#ddd;width:100px;margin-top:10px;
+  }
+  .fl {float: left}
+  .rl {float: right}
+}
 
 .kj {
   a {
