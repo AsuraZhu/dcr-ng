@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Input, Output, EventEmitter} from '@angular/core';
-import { DcrInput } from './dcrinput';
-import { AttackService } from '../../AttackService';
-
-
 
 
 @Component({
@@ -13,7 +9,7 @@ import { AttackService } from '../../AttackService';
   styleUrls: ['dcr-input.component.scss'],
 })
 export class DcrInputComponent implements OnInit {
-  constructor(private attackService: AttackService) { }
+  constructor() { }
   @Input() type = 'text';
   @Input() value: string | number = '';
   @Input() maxlength: number;
@@ -25,12 +21,9 @@ export class DcrInputComponent implements OnInit {
 
   handleInput(val: string): void {
     this.value = val;
-    console.log('执行');
     this.modelChange.emit(val);
 
   }
   ngOnInit() {
-      this.attackService.attack(100);
-      console.log(this);
    }
 }

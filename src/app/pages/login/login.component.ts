@@ -32,8 +32,8 @@ export class LoginComponent implements OnInit {
       console.log(damage);
     });
   }
-  eventHandler(event: DcrInput): void {
-    console.log(event.imgsrc);
+  eventHandler(event: any): void {
+    console.log(event);
   }
   open(): void {
     const user = new User();
