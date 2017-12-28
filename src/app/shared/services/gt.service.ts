@@ -12,6 +12,10 @@ import { HttpClient } from '@angular/common/http';
       return Promise.reject(error.message || error);
     }
     constructor(private http: HttpClient) {}
+    /**
+     * 获取极验验证码
+     * @returns {} :any
+     */
     getData(): Promise<any> {
       return this.http.get(this.url)
                  .toPromise()
