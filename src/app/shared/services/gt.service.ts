@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 /**
  * 获取极验验证码
+ * @constructor
  */
 
  @Injectable()
@@ -14,6 +15,7 @@ import { HttpClient } from '@angular/common/http';
     constructor(private http: HttpClient) {}
     /**
      * 获取极验验证码
+     * @返回参数 是{}
      * @returns {} :any
      */
     getData(): Promise<any> {
