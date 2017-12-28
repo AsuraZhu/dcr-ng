@@ -9,8 +9,8 @@ import 'rxjs/add/operator/combineLatest';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { User } from '../../ngrx/reducer/userinfo/user.class';
-import { DcrInput } from '../../shared/dcr-input/dcrinput';
 import { AttackService } from '../../shared/AttackService';
+import { DcrInput } from '../../shared/components/dcr-input/dcrinput';
 
 @Component({
   selector: 'app-login',
