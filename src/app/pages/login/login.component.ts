@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Store } from '@ngrx/store';
 import * as reducer from '../../ngrx/reducer';
 import * as load from '../../ngrx/action/loading';
@@ -23,7 +22,6 @@ export class LoginComponent implements OnInit {
   data$: Observable<any>;
   strT: string;
   constructor(
-    private http: HttpClient,
     private store: Store<reducer.State>,
     private attackService: AttackService,
     private gtService: GtService
@@ -33,7 +31,7 @@ export class LoginComponent implements OnInit {
     });
   }
   eventHandler(event: any): void {
-    console.log(event);
+    //  获取到 输入框的值
   }
   open(): void {
     const user = new User();
@@ -48,12 +46,16 @@ export class LoginComponent implements OnInit {
         gt: data['gt'],
         challenge: data['challenge'],
         product: 'popup',
-        width: '300px'
+        width: '280px'
       }, (captchaObj) => {
         captchaObj.appendTo('#captcha');
         captchaObj.onReady(function () {
         });
       });
     });
+  }
+// 登录
+  login() {
+    console.log('登录');
   }
 }

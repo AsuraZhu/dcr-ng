@@ -2,7 +2,21 @@ input {
   border: none;
   outline: none;
 }
-
+.username, .password {
+  width: 280px;
+  margin: 0px  auto;
+  margin-bottom: 50px;
+}
+.username {
+  padding-top:53px;
+}
+// 级验验证码
+.captcha {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+  margin-left:55px;
+}
 .body {
   height: 1080px;
   background: url('/assets/images/bg.png');
