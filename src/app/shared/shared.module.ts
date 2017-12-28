@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DcrFootComponent, DcrHeadComponent, DcrInputComponent } from './components/index';
 import { AttackService } from './AttackService';
+import { GtService } from './services';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { AttackService } from './AttackService';
     DcrInputComponent
   ],
   providers: [
-    AttackService
+    AttackService,
+    GtService
   ],
   exports: [
     DcrFootComponent,
