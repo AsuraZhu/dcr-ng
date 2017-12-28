@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DcrFootComponent } from './footer/dcr-foot.component';
-import { DcrHeadComponent } from './header/dcr-head.component';
-import { DcrInputComponent } from './dcr-input/dcr-input.component';
+import { DcrFootComponent, DcrHeadComponent, DcrInputComponent } from './components/index';
 import { AttackService } from './AttackService';
 
 

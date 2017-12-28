@@ -35,7 +35,7 @@ import { Component, OnInit, trigger, state, style, transition, animate } from '@
     ])
   ]
 })
-export class NameComponent implements OnInit {
+export class CarouselComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }

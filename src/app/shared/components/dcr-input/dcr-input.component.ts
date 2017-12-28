@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Input, Output, EventEmitter} from '@angular/core';
 import { DcrInput } from './dcrinput';
-import { AttackService } from '../AttackService';
+import { AttackService } from '../../AttackService';
+
 
 
 
