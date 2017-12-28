@@ -5,11 +5,13 @@ import { DcrNavbarComponent } from './dcr-navbar/dcr-navbar.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PagesComponent } from './index/pages.component';
+import { RegistComponent } from './register/register.component';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
   DcrNavbarComponent,
-  LoginComponent
+  LoginComponent,
+  RegistComponent
 ];
 @NgModule({
   declarations: [
