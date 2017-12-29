@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 
  @Injectable()
  export class GtService {
-    private url = 'http://batpool.dev.ailadui.net/v1/api/user/public/checkgt?time=' + (new Date()).getTime();
+    private url = '/user/public/checkgt?time=' + (new Date()).getTime();
     private handleError(error: any): Promise<any> {
       return Promise.reject(error.message || error);
     }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterService } from '../../shared/services/register.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class RegistComponent implements OnInit {
-  constructor() { }
+  constructor(private get: RegisterService) { }
   isFalse = true;
 
   ngOnInit() {}
@@ -18,6 +19,8 @@ export class RegistComponent implements OnInit {
   }
   // 点击注册
   resetPass() {
+    this.get.getCode().then(res => {
+    });
     console.log('注册');
   }
 

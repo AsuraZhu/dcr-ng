@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DcrFootComponent, DcrHeadComponent, DcrInputComponent } from './components/index';
 import { AttackService } from './AttackService';
 import { GtService } from './services';
+import { RegisterService } from './services/register.service';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { GtService } from './services';
   ],
   providers: [
     AttackService,
-    GtService
+    GtService,
+    RegisterService
   ],
   exports: [
     DcrFootComponent,

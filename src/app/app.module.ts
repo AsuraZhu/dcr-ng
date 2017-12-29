@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ElModule } from 'element-angular';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from './shared/services/AuthInterceptor.service';
 
 
 @NgModule({
@@ -24,11 +26,13 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     ElModule.forRoot(),
     SharedModule,
     AppRoutingModule,
+    HttpClientModule,
     StoreModule.forRoot(reducer),
     StoreDevtoolsModule.instrument()
   ],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' }
+    { provide: APP_BASE_HREF, useValue: '/' },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

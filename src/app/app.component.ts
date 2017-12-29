@@ -16,7 +16,6 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit(): void {
     this.router.events.subscribe(event => {
-      console.log(NProgress);
       if (event instanceof NavigationStart) {
         NProgress.start();
       }
