@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class RegistComponent implements OnInit {
   constructor() { }
-  isFalse= true;
+  isFalse = true;
 
-  ngOnInit() { }
+  ngOnInit() {}
   // 获取 验证码
   getCode() {
     console.log('获取验证码');
@@ -19,5 +19,10 @@ export class RegistComponent implements OnInit {
   // 点击注册
   resetPass() {
     console.log('注册');
+  }
+
+  eventHandler(event: any, type: string): void {
+    //  获取到 输入框的值
+    console.log(event, type);
   }
 }
