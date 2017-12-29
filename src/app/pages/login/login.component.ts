@@ -1,15 +1,15 @@
-import { Component, OnInit } from "@angular/core";
-import { Store } from "@ngrx/store";
-import * as reducer from "../../ngrx/reducer";
-import * as load from "../../ngrx/action/loading";
-import "rxjs/add/operator/startWith";
-import "rxjs/add/operator/map";
-import "rxjs/add/operator/combineLatest";
-import { Observable } from "rxjs/Observable";
-import { Subject } from "rxjs/Subject";
-import { User } from "../../ngrx/reducer/userinfo/user.class";
-import { DcrInput } from "../../shared/components/dcr-input/dcrinput";
-import { GtService } from "../../shared/services/index";
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import * as reducer from '../../ngrx/reducer';
+import * as load from '../../ngrx/action/loading';
+import 'rxjs/add/operator/startWith';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/combineLatest';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+import { User } from '../../ngrx/reducer/userinfo/user.class';
+import { DcrInput } from '../../shared/components/dcr-input/dcrinput';
+import { GtService } from '../../shared/services/index';
 import { ElMessageService } from 'element-angular'; // 弹窗服务
 
 @Component({
