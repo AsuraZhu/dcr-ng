@@ -1,4 +1,10 @@
-import { Component, OnInit, TemplateRef, ElementRef, Renderer2 } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  TemplateRef,
+  ElementRef,
+  Renderer2
+} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/mergeMap';
@@ -15,11 +21,12 @@ import { ViewChild } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
   constructor(private renderer: Renderer2) {}
-  part =  [{
-    name: '',
-    href: '',
-    src: '/assets/images/homelogo/logo-white0.png'
-  },
+  part = [
+    {
+      name: '',
+      href: '',
+      src: '/assets/images/homelogo/logo-white0.png'
+    },
     {
       name: '',
       href: '',
@@ -90,7 +97,9 @@ export class PagesComponent implements OnInit {
     source2.next('1');
     source2.next('2');
     // source2.complete();
-    source2.subscribe(value => { console.log(value, 'not set'); } );
+    source2.subscribe(value => {
+      console.log(value, 'not set');
+    });
     source2.next('3');
     source2.next('4');
     source2.complete();
@@ -100,21 +109,25 @@ export class PagesComponent implements OnInit {
     // setTimeout(function(){
     //   source2.subscribe(value => { console.log(value, 'setTimeout'); } );
     // } , 1000);
+  }
 
-
-   }
-
-   // mouseover 事件
-   over(index: number, ev: MouseEvent): void {
-      // const elementRef = this.src.nativeElement;
-      (<HTMLImageElement>ev.target).setAttribute('src', '/assets/images/homelogo/logo-blue' + index + '.png');
-      // this.renderer.setAttribute(elementRef, 'src', '/assets/images/homelogo/logo-white' + index + '.png');
-      // elementRef.setAttribute('src', '0.png');
-     //  console.log(index, ev.target);
-   }
-   out(index: number, ev): void {
+  // mouseover 事件
+  over(index: number, ev: MouseEvent): void {
     // const elementRef = this.src.nativeElement;
-    ev.target.setAttribute('src', '/assets/images/homelogo/logo-white' + index + '.png');
+    (<HTMLImageElement>ev.target).setAttribute(
+      'src',
+      '/assets/images/homelogo/logo-blue' + index + '.png'
+    );
+    // this.renderer.setAttribute(elementRef, 'src', '/assets/images/homelogo/logo-white' + index + '.png');
+    // elementRef.setAttribute('src', '0.png');
+    //  console.log(index, ev.target);
+  }
+  out(index: number, ev): void {
+    // const elementRef = this.src.nativeElement;
+    ev.target.setAttribute(
+      'src',
+      '/assets/images/homelogo/logo-white' + index + '.png'
+    );
     // this.renderer.setAttribute(elementRef, 'src', '/assets/images/homelogo/logo-blue' + index + '.png');
-   }
+  }
 }

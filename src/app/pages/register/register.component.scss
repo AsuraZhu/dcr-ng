@@ -5,20 +5,20 @@ input {
 
 .body {
   height: 1080px;
-  background: url('/assets/images/bg.png');
+  background: url("/assets/images/bg.png");
 }
 
 img {
-  top: 0px!important;
+  top: 0px !important;
 }
 
 .clearfix:after {
-  content: '';
+  content: "";
   height: 0; //高度为0
   line-height: 0; //行高为0
   display: block; //将文本转为块级元素
   visibility: hidden; //将元素隐藏
-  clear: both //清除浮动
+  clear: both; //清除浮动
 }
 
 .wrapper {
@@ -40,7 +40,7 @@ img {
   }
   .login-t {
     width: 390px;
-    box-shadow: 0 5px 50px 0 rgba(28, 149, 212, 0.30);
+    box-shadow: 0 5px 50px 0 rgba(28, 149, 212, 0.3);
     margin: 0 auto;
     background: #fff;
     z-index: 1000;
@@ -55,7 +55,6 @@ img {
   font-size: 14px;
 }
 
-
 /*登录按钮*/
 
 .logo-btn {
@@ -67,9 +66,8 @@ img {
   text-align: center;
   line-height: 50px;
   margin: 0 auto;
-  background: #1879BE;
+  background: #1879be;
 }
-
 
 /*tab*/
 
@@ -112,13 +110,13 @@ img {
     color: #666;
   }
   a.act {
-    color: #1879BE;
+    color: #1879be;
   }
   .split {
     height: 40px;
     border-left: 1px solid #ddd;
     float: left;
-    margin-top: 8px
+    margin-top: 8px;
   }
 }
 
@@ -135,10 +133,10 @@ img {
 // 手机号注册
 // 同意说明
 .desc {
-  color: #1879BE;
+  color: #1879be;
   width: 320px;
   font-size: 12px;
   margin-left: 55px;
   margin-top: 10px;
-  padding-bottom: 57px
+  padding-bottom: 57px;
 }

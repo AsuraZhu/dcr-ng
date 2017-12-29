@@ -3,16 +3,15 @@ import { NgModule } from '@angular/core';
 const routes: Routes = [
   { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule' },
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' },
+  { path: '**', redirectTo: 'pages' }
 ];
 
 const config: ExtraOptions = {
-  useHash: false,
+  useHash: false
 };
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, config)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

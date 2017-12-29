@@ -3,23 +3,23 @@
     <a routerLink="/">BATPOOL</a>
   </div>
   <div class="lang">
-      <a [ngClass]="activeName==='zh'?'act':''" (click)="toggle('zh')" href="javascript:;">中文</a>
-      <span>/</span>
-      <a [ngClass]="activeName==='en'?'act':''" (click)="toggle('en')" href="javascript:;">EN</a>
+    <a [ngClass]="activeName==='zh'?'act':''" (click)="toggle('zh')" href="javascript:;">中文</a>
+    <span>/</span>
+    <a [ngClass]="activeName==='en'?'act':''" (click)="toggle('en')" href="javascript:;">EN</a>
   </div>
   <div class="ul">
-      <ul>
-        <!-- {{ meau }} -->
-          <li *ngFor="let item of meau">
-              <a style="cursor:pointer;" [ngClass]="activeMeau===item.name?'actMeau':''">{{ item.name }}</a>
-              <!-- <a :class="{actMeau:activeMeau==item}" href="javascript:;">{{item}}</a> -->
-          </li>
-      </ul>
+    <ul>
+      <!-- {{ meau }} -->
+      <li *ngFor="let item of meau">
+        <a style="cursor:pointer;" [ngClass]="activeMeau===item.name?'actMeau':''">{{ item.name }}</a>
+        <!-- <a :class="{actMeau:activeMeau==item}" href="javascript:;">{{item}}</a> -->
+      </li>
+    </ul>
   </div>
 
   <div class="login">
-      <a routerLink="/pages/login" style="margin-right: 26px" to="login">登录</a>
-      <!-- <a style="margin-right: 26px" href="javascript:;">登录</a> -->
-      <a routerLink="/pages/register" class="reg-act" style="margin-right: 26px" >注册</a>
+    <a routerLink="/pages/login" style="margin-right: 26px" to="login">登录</a>
+    <!-- <a style="margin-right: 26px" href="javascript:;">登录</a> -->
+    <a routerLink="/pages/register" class="reg-act" style="margin-right: 26px">注册</a>
   </div>
 </div>

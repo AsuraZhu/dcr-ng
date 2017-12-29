@@ -1,5 +1,5 @@
 <dcr-head>
-<dcr-nav></dcr-nav>
+  <dcr-nav></dcr-nav>
 </dcr-head>
 
 
@@ -25,8 +25,8 @@
         <ul class="coin_type">
           <!--最后一个长度为0-->
           <!-- <li :class="{ret:index==cointype.length-1,act_tive:current_type==val}" @click="changecoin(val)" v-for="(val,index) in cointype"> -->
-            <!-- {{val}} -->
-            <!-- <div v-show="current_type==val" class="trang"></div> -->
+          <!-- {{val}} -->
+          <!-- <div v-show="current_type==val" class="trang"></div> -->
           <!-- </li> -->
         </ul>
       </div>
@@ -47,9 +47,9 @@
       <p class="p1">合作伙伴</p>
       <p class="p2">30,000+ 点产品设计团队共同选择，50,000+ 的同时协同项目</p>
       <ul class="clearfix">
-        <li *ngFor="let item of part; index as i" >
+        <li *ngFor="let item of part; index as i">
           <a (mouseout)="out(i,$event)" (mouseover)="over(i,$event)" href="">
-           <img [src]="item.src" alt="">
+            <img [src]="item.src" alt="">
           </a>
         </li>
       </ul>
@@ -60,6 +60,3 @@
   </section>
   <!-- <foot></foot> -->
 </div>
-
-
-

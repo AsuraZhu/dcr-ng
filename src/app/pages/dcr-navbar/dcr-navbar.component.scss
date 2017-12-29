@@ -1,6 +1,5 @@
-
-$blue1:#1879BE;
-a:hover{
+$blue1: #1879be;
+a:hover {
   text-decoration: none;
 }
 .wrap {
@@ -15,11 +14,11 @@ a:hover{
   float: left;
   margin: 15px 41px 16px 0;
   a {
-      display: block;
-      height: 29px;
-      text-indent: -999px;
-      width: 155px;
-      background: url('/assets/images/Bitmap.png');
+    display: block;
+    height: 29px;
+    text-indent: -999px;
+    width: 155px;
+    background: url("/assets/images/Bitmap.png");
   }
 }
 
@@ -30,13 +29,13 @@ a:hover{
   line-height: 18px;
   margin-bottom: 13px;
   a {
-      display: block;
-      float: left;
+    display: block;
+    float: left;
   }
   span {
-      display: block;
-      float: left;
-      margin: 0 9px;
+    display: block;
+    float: left;
+    margin: 0 9px;
   }
 }
 
@@ -44,28 +43,27 @@ a:hover{
   color: $blue1;
 }
 
-
 .ul {
   float: left;
   margin-left: 404px;
   height: 60px;
   background: #fff;
   ul {
-      li {
-          height: 58px;
-          line-height: 60px;
-          width: 80px;
-          float: left;
-          display: block;
-          list-style: none;
-          a {
-              font-size: 16px;
-              display: block;
-              height: 58px;
-              line-height: 60px;
-              text-align: center;
-          }
+    li {
+      height: 58px;
+      line-height: 60px;
+      width: 80px;
+      float: left;
+      display: block;
+      list-style: none;
+      a {
+        font-size: 16px;
+        display: block;
+        height: 58px;
+        line-height: 60px;
+        text-align: center;
       }
+    }
   }
 }
 
@@ -73,14 +71,14 @@ a:hover{
   height: 40px;
   width: 90px;
   margin-top: 10px;
-  color: #fff!important;
+  color: #fff !important;
   background: $blue1;
   text-align: center;
   line-height: 40px;
 }
 
 .actMeau {
-  border-bottom: 2px solid #1AA8F0;
+  border-bottom: 2px solid #1aa8f0;
 }
 
 .login {
@@ -89,15 +87,15 @@ a:hover{
   height: 60px;
   line-height: 60px;
   a {
-      display: block;
-      float: left;
-      font-size: 16px;
-      color: $blue1;
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: $blue1;
   }
 }
 
 .headfix {
-  position: fixed!important;
+  position: fixed !important;
   z-index: 77;
   width: 100%;
   left: 0;

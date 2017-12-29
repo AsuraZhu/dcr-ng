@@ -9,13 +9,9 @@
     <div class="login-t">
       <!--选项卡手机注册 邮箱注册-->
       <div class="tab clearfix">
-        <a [ngClass]="isFalse?'act':''"
-          (click)="isFalse=true"
-          href="javascript:;">手机注册</a>
+        <a [ngClass]="isFalse?'act':''" (click)="isFalse=true" href="javascript:;">手机注册</a>
         <div class="split"></div>
-        <a [ngClass]="!isFalse?'act':''"
-          (click)="isFalse=false"
-          href="javascript:;">邮箱注册</a>
+        <a [ngClass]="!isFalse?'act':''" (click)="isFalse=false" href="javascript:;">邮箱注册</a>
       </div>
       <!--手机号注册-->
       <div *ngIf="isFalse">
@@ -62,11 +58,11 @@
           <dcr-input placeholder="请输入用户名" type="text" icon="/assets/images/myinput/username.png" (modelChange)='eventHandler($event,"username")'>
           </dcr-input>
         </div>
-        <div class="password" >
+        <div class="password">
           <dcr-input placeholder="请输入邮箱" type="text" icon="/assets/images/myinput/email.png" (modelChange)='eventHandler($event,"username")'>
           </dcr-input>
         </div>
-        <div class="password" >
+        <div class="password">
           <dcr-input placeholder="确认密码" type="password" icon="/assets/images/myinput/password.png" (modelChange)='eventHandler($event,"username")'>
           </dcr-input>
         </div>

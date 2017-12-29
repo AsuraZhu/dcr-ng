@@ -1,4 +1,4 @@
-export  class DcrInput {
+export class DcrInput {
   constructor(
     imgsrc: string,
     type: string,
@@ -11,7 +11,7 @@ export  class DcrInput {
     this.placeholder = placeholder;
   }
   public imgsrc: string; // 输入框 图标
-  public type: string;   // 类型 比如 text password
-  public value: string;  //
+  public type: string; // 类型 比如 text password
+  public value: string; //
   public placeholder: string;
 }

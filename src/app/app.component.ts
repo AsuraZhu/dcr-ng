@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import NProgress from 'nprogress';
-import { NavigationEnd, NavigationStart} from '@angular/router';
+import { NavigationEnd, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,6 @@ import { NavigationEnd, NavigationStart} from '@angular/router';
   <router-outlet></router-outlet>
   <dcr-foot></dcr-foot>
   `
-  ,
 })
 export class AppComponent implements OnInit {
   title = 'app';
@@ -19,7 +18,7 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationStart) {
         NProgress.start();
       }
-      if ( event instanceof NavigationEnd) {
+      if (event instanceof NavigationEnd) {
         NProgress.done();
       }
     });

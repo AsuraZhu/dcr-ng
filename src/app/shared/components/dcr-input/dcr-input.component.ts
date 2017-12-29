@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Input, Output, EventEmitter} from '@angular/core';
-
+import { Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'dcr-input',
   templateUrl: 'dcr-input.component.html',
-  styleUrls: ['dcr-input.component.scss'],
+  styleUrls: ['dcr-input.component.scss']
 })
 export class DcrInputComponent implements OnInit {
-  constructor() { }
+  constructor() {}
   @Input() type = 'text';
   @Input() value: string | number = '';
   @Input() maxlength: number;
@@ -22,8 +21,6 @@ export class DcrInputComponent implements OnInit {
   handleInput(val: string): void {
     this.value = val;
     this.modelChange.emit(val);
-
   }
-  ngOnInit() {
-   }
+  ngOnInit() {}
 }

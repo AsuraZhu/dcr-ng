@@ -15,11 +15,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './shared/services/AuthInterceptor.service';
 
-
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -32,8 +29,8 @@ import { AuthInterceptor } from './shared/services/AuthInterceptor.service';
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

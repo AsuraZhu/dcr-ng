@@ -12,10 +12,9 @@ export class AuthInterceptor implements HttpInterceptor {
         // req.url =
         // 绝对路径
         let clonedRequest = req.clone({});
-        console.log(req.url);
         if (req.url[0] === '/') {
           clonedRequest = req.clone({
-            url: 'http://batpool.dev.ailadui.net/v1/api/' + req.url
+            url: 'http://batpool.dev.ailadui.net/v1/api' + req.url
           });
         }
         return next.handle(clonedRequest);

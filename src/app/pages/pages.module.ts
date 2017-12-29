@@ -13,19 +13,9 @@ const PAGES_COMPONENTS = [
   RegistComponent
 ];
 @NgModule({
-  declarations: [
-    ...PAGES_COMPONENTS
-  ],
-  imports: [
-    PagesRoutingModule,
-    SharedModule,
-  ],
-  exports: [
-    ...PAGES_COMPONENTS,
-  ],
-  providers: [
-  ],
+  declarations: [...PAGES_COMPONENTS],
+  imports: [PagesRoutingModule, SharedModule],
+  exports: [...PAGES_COMPONENTS],
+  providers: []
 })
-export class PagesModule  { }
-
-
+export class PagesModule {}

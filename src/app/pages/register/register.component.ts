@@ -7,11 +7,9 @@ import { RegisterService } from '../../shared/services/register.service';
   templateUrl: 'register.component.html',
   styleUrls: ['register.component.scss']
 })
-
 export class RegistComponent implements OnInit {
-  constructor(private get: RegisterService) { }
+  constructor(private get: RegisterService) {}
   isFalse = true;
-
   ngOnInit() {}
   // 获取 验证码
   getCode() {
@@ -19,8 +17,7 @@ export class RegistComponent implements OnInit {
   }
   // 点击注册
   resetPass() {
-    this.get.getCode().then(res => {
-    });
+    this.get.getCode().then(res => {});
     console.log('注册');
   }
 
