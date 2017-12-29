@@ -1,3 +1,84 @@
 <dcr-head>
-    <dcr-nav></dcr-nav>
+  <dcr-nav></dcr-nav>
 </dcr-head>
+
+<div class="body">
+  <div class="wrapper">
+    <p class="tit1">请创建您的BATPOOL福池账号</p>
+    <p class="tit2">只需一个免费账号，即可享受BAT多币种矿池的所有产品和服务。</p>
+    <div class="login-t">
+      <!--选项卡手机注册 邮箱注册-->
+      <div class="tab clearfix">
+        <a [ngClass]="isFalse?'act':''"
+          (click)="isFalse=true"
+          href="javascript:;">手机注册</a>
+        <div class="split"></div>
+        <a [ngClass]="!isFalse?'act':''"
+          (click)="isFalse=false"
+          href="javascript:;">邮箱注册</a>
+      </div>
+      <!--手机号注册-->
+      <div *ngIf="isFalse">
+        <div class="password" style="padding-top:33px;">
+          <dcr-input placeholder="请输入用户名" type="text" icon="/assets/images/myinput/username.png" (modelChange)='eventHandler($event,"username")'>
+          </dcr-input>
+        </div>
+        <!--输入手机号-->
+        <div class="phone">
+          <div style="margin-bottom: 10px">
+            <img src="assets/images/myinput/phone.png" alt="" style="margin-right: 13px ">
+            <span style="color:#666;display: inline-block;position: relative;top: -3px">手机号</span>
+          </div>
+          <div class="input-phone">
+            <div style="position: absolute;width: 20px;height: 12px;background: red;top: 9px;"></div>
+            <div style="position: absolute;width: 11px;height: 7px;background: cadetblue;left: 29px;top: 11px;"></div>
+            <div style="position: absolute;left: 58px">+86</div>
+            <input style="border: none;padding-left: 89px;font-size: 14px;color: #666" type="text">
+          </div>
+        </div>
+        <!--获取手机验证码-->
+        <div class="password top clearfix">
+          <div style="width: 170px;overflow-x:hidden;float: left">
+            <dcr-input placeholder="请输入验证码" type="text" icon="/assets/images/myinput/Combined.png" (modelChange)='eventHandler($event,"username")'>
+            </dcr-input>
+          </div>
+          <a (click)="getCode()" class="getc" href="javascript:;">获取验证码</a>
+          <!--获取验证码-->
+        </div>
+        <!-- 密码 -->
+        <div class="password">
+          <dcr-input placeholder="请输入密码" type="password" icon="/assets/images/myinput/password.png" (modelChange)='eventHandler($event,"username")'>
+          </dcr-input>
+        </div>
+        <!-- 确认密码 -->
+        <div class="password">
+          <dcr-input placeholder="确认密码" type="password" icon="/assets/images/myinput/password.png" (modelChange)='eventHandler($event,"username")'>
+          </dcr-input>
+        </div>
+      </div>
+      <!--邮箱注册-->
+      <div *ngIf="!isFalse">
+        <div class="password" style="padding-top: 33px;">
+          <dcr-input placeholder="请输入用户名" type="text" icon="/assets/images/myinput/username.png" (modelChange)='eventHandler($event,"username")'>
+          </dcr-input>
+        </div>
+        <div class="password" >
+          <dcr-input placeholder="请输入邮箱" type="text" icon="/assets/images/myinput/email.png" (modelChange)='eventHandler($event,"username")'>
+          </dcr-input>
+        </div>
+        <div class="password" >
+          <dcr-input placeholder="确认密码" type="password" icon="/assets/images/myinput/password.png" (modelChange)='eventHandler($event,"username")'>
+          </dcr-input>
+        </div>
+        <div class="password">
+          <dcr-input placeholder="确认密码" type="password" icon="/assets/images/myinput/password.png" (modelChange)='eventHandler($event,"username")'>
+          </dcr-input>
+        </div>
+      </div>
+      <div (click)="resetPass()" class="logo-btn">注册</div>
+      <div class="desc">
+        <span style="color:#999">已阅读并同意</span>《用户协议》《服务条款》《免责声明》</div>
+      <!--获取验证码-->
+    </div>
+  </div>
+</div>

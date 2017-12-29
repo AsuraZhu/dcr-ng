@@ -8,9 +8,10 @@ import 'rxjs/add/operator/combineLatest';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { User } from '../../ngrx/reducer/userinfo/user.class';
-import { AttackService } from '../../shared/AttackService';
 import { DcrInput } from '../../shared/components/dcr-input/dcrinput';
 import { GtService } from '../../shared/services/index';
+import { ElMessageService } from 'element-angular';  // 弹窗服务
+
 
 @Component({
   selector: 'app-login',
@@ -23,15 +24,13 @@ export class LoginComponent implements OnInit {
   strT: string;
   constructor(
     private store: Store<reducer.State>,
-    private attackService: AttackService,
-    private gtService: GtService
+    private gtService: GtService,
+    private message: ElMessageService
   ) {
-    this.attackService.damage$.subscribe(damage => {
-      console.log(damage);
-    });
   }
-  eventHandler(event: any): void {
+  eventHandler(event: any, type: string): void {
     //  获取到 输入框的值
+    console.log(event, type);
   }
   open(): void {
     const user = new User();
@@ -57,5 +56,6 @@ export class LoginComponent implements OnInit {
 // 登录
   login() {
     console.log('登录');
+    this.message.error('用户名不能为空');
   }
 }

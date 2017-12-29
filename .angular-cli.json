@@ -18,7 +18,8 @@
     "testTsconfig": "tsconfig.spec.json",
     "prefix": "dcr",
     "styles": [
-      "styles.scss"
+      "styles.scss",
+      "../node_modules/element-angular/theme/index.css"
     ],
     "scripts": [
       "assets/js/gt.js"

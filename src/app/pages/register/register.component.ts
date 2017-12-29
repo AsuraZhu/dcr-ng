@@ -9,6 +9,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class RegistComponent implements OnInit {
   constructor() { }
+  isFalse= true;
 
   ngOnInit() { }
+  // 获取 验证码
+  getCode() {
+    console.log('获取验证码');
+  }
+  // 点击注册
+  resetPass() {
+    console.log('注册');
+  }
 }
